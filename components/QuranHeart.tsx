@@ -6,28 +6,29 @@ export default function QuranHeart() {
     const [showModal, setShowModal] = useState(false);
   const [message, setMessage] = useState("");
 
-  const handleClick = (e) => {
-    // التأكد إنك ضغطتي على عنصر path
-    if (e.target.tagName !== "path") return;
+  const handleClick = (e: React.MouseEvent<SVGElement>) => {
+  // التأكد إنك ضغطتي على عنصر path
+  if ((e.target as SVGElement).tagName !== "path") return;
 
-    const pathEl = e.target;
-    const current = pathEl.getAttribute("data-active") === "true";
+  const pathEl = e.target as SVGElement;
+  const current = pathEl.getAttribute("data-active") === "true";
 
-    if (current) {
-      pathEl.setAttribute("fill", "#A2A3A5"); // فاتح على الخلفية الغامقة
-      pathEl.setAttribute("fill-opacity", "0.6");
-      pathEl.setAttribute("data-active", "false");
-    } else {
-      pathEl.setAttribute("fill", "green"); // اللون الجديد المميز
-      pathEl.setAttribute("fill-opacity", "1");
-      pathEl.setAttribute("data-active", "true");
-    }
+  if (current) {
+    pathEl.setAttribute("fill", "#A2A3A5"); // فاتح على الخلفية الغامقة
+    pathEl.setAttribute("fill-opacity", "0.6");
+    pathEl.setAttribute("data-active", "false");
+  } else {
+    pathEl.setAttribute("fill", "green"); // اللون الجديد المميز
+    pathEl.setAttribute("fill-opacity", "1");
+    pathEl.setAttribute("data-active", "true");
+  }
 
-    const randomMessage =
-      quranMessages[Math.floor(Math.random() * quranMessages.length)];
-    setMessage(randomMessage);
-    setShowModal(true);
-  };
+  const randomMessage =
+    quranMessages[Math.floor(Math.random() * quranMessages.length)];
+  setMessage(randomMessage);
+  setShowModal(true);
+};
+
   return <>
     <div className="relative h-screen flex items-center justify-center mt-8 pt-7">
 
