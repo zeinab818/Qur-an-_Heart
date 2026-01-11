@@ -21,12 +21,13 @@ export default function QuranHeart() {
     pathEl.setAttribute("fill", "green"); // اللون الجديد المميز
     pathEl.setAttribute("fill-opacity", "1");
     pathEl.setAttribute("data-active", "true");
-  }
-
-  const randomMessage =
+     const randomMessage =
     quranMessages[Math.floor(Math.random() * quranMessages.length)];
   setMessage(randomMessage);
   setShowModal(true);
+  }
+
+ 
 };
 
   return <>
