@@ -8,7 +8,7 @@ export default function Home() {
   </h1>
  
   <QuranHeart />
-   <p className="lg:mt-2 text-gray-600 text-center max-w-md">
+   <p className=" text-green-900 text-center">
     عَنِ النَّبِيِّ ﷺ: <br/>
     «خَيْرُكُمْ مَنْ تَعَلَّمَ الْقُرْآنَ وَعَلَّمَهُ»
   </p>
