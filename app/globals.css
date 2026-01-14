@@ -26,3 +26,12 @@ path {
 svg text {
   fill: #111;
 }
+
+.quran-path {
+  fill: #A2A3A5;
+  transition: fill 0.2s ease;
+}
+
+.quran-path.active {
+  fill: green;
+}

@@ -1,5 +1,8 @@
 import QuranHeart from "@/components/QuranHeart";
 
+
+
+
 export default function Home() {
   return <>
   <main className="flex flex-col justify-center items-center py-6 bg-gray-50 min-h-screen">
@@ -7,7 +10,7 @@ export default function Home() {
    💜 وَرَتِّلِ الْقُرْآنَ تَرْتِيلًا 
   </h1>
  
-  <QuranHeart />
+  <QuranHeart></QuranHeart>
    <p className=" text-green-900 text-center">
     عَنِ النَّبِيِّ ﷺ: <br/>
     «خَيْرُكُمْ مَنْ تَعَلَّمَ الْقُرْآنَ وَعَلَّمَهُ»
